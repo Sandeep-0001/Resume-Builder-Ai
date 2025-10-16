@@ -1,11 +1,14 @@
 import axios from "axios";
-import { API_KEY } from "@/config/config";
+
+
+const API_BASE_URL = import.meta.env.VITE_BASE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY; // set in Vercel
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_BASE_URL + "api/",
+  baseURL: `${API_BASE_URL}api/`,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${API_KEY}`,
+    Authorization: API_KEY ? `Bearer ${API_KEY}` : undefined,
   },
 });
 
