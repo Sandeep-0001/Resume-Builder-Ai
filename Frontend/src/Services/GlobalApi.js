@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { API_KEY } from "@/config/config";
 
 const API_BASE_URL = import.meta.env.VITE_BASE_URL;
 const API_KEY = import.meta.env.VITE_API_KEY; // set in Vercel
