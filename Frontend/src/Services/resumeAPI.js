@@ -1,13 +1,16 @@
 import axios from "axios";
-import { VITE_APP_URL } from "@/config/config";
+
+// Use Vite environment variable directly
+const API_BASE_URL = import.meta.env.VITE_APP_URL;
 
 const axiosInstance = axios.create({
-  baseURL: VITE_APP_URL + "api/",
+  baseURL: `${API_BASE_URL}api/`,
   headers: {
     "Content-Type": "application/json",
   },
-  withCredentials: true,
+  withCredentials: true, // keep if backend uses cookies
 });
+
 
 const createNewResume = async (data) => {
   try {
