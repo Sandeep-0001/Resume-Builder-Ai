@@ -1,6 +1,6 @@
 // models/User.js
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 const { Schema, model } = mongoose;
 
