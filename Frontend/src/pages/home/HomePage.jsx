@@ -127,6 +127,7 @@ function HomePage() {
             </div>
           </div>
         </div>
+        <ChatBot/>
       </section>
       <footer className="bg-white" aria-labelledby="footer-heading">
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 p-5 flex justify-between">
