@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { startUser } from "../../Services/login.js";
 import { useDispatch, useSelector } from "react-redux";
 import { addUserData } from "@/features/user/userFeatures.js";
+import ChatBot from "@/components/custom/ChatBot";
 
 function HomePage() {
   const user = useSelector((state) => state.editUser.userData);
